@@ -1,5 +1,6 @@
 import css from './App.module.css';
 import Sidebar from './components/Sidebar';
+import StatefulGreeting from './components/StatefulGreeting';
 
 function App() {
   return (
@@ -7,6 +8,9 @@ function App() {
       {/* Add your components here */}
 
       <Sidebar> </Sidebar>
+      <StatefulGreeting myname="Peter">
+
+      </StatefulGreeting>
 
     </div>
   );

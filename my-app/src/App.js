@@ -3,6 +3,8 @@ import NavBarSimple from './components/NavBarSimple';
 import Sidebar from './components/Sidebar';
 import StatefulGreeting from './components/StatefulGreeting';
 import StatefulGreetingWithRespose from './components/StatefulGreetingWithResponse';
+import ClassEvents from './components/events/ClassEvents';
+import FunctionalEvents from './components/events/FunctionalEvents';
 
 function App() {
   return (
@@ -16,8 +18,15 @@ function App() {
       <StatefulGreetingWithRespose></StatefulGreetingWithRespose>
 
       <NavBarSimple>
-        
+
       </NavBarSimple>
+
+      <ClassEvents>
+
+      </ClassEvents>
+      <FunctionalEvents>
+
+      </FunctionalEvents>
 
     </div>
   );

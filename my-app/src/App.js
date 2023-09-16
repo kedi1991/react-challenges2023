@@ -1,6 +1,7 @@
 import css from './App.module.css';
 import Sidebar from './components/Sidebar';
 import StatefulGreeting from './components/StatefulGreeting';
+import StatefulGreetingWithRespose from './components/StatefulGreetingWithResponse';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <StatefulGreeting myname="Peter">
 
       </StatefulGreeting>
+      <StatefulGreetingWithRespose></StatefulGreetingWithRespose>
 
     </div>
   );

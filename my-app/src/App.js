@@ -1,4 +1,5 @@
 import css from './App.module.css';
+import NavBarSimple from './components/NavBarSimple';
 import Sidebar from './components/Sidebar';
 import StatefulGreeting from './components/StatefulGreeting';
 import StatefulGreetingWithRespose from './components/StatefulGreetingWithResponse';
@@ -13,6 +14,10 @@ function App() {
 
       </StatefulGreeting>
       <StatefulGreetingWithRespose></StatefulGreetingWithRespose>
+
+      <NavBarSimple>
+        
+      </NavBarSimple>
 
     </div>
   );

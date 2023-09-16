@@ -12,15 +12,18 @@ class StatefulGreetingWithRespose extends React.Component{
     }
 
     manageClick = () => {
-        this.setState({
-            greeting: this.state.greeting === "Bye!"? "Hello": "Bye!",
-            buttonText: this.state.buttonText === "Logout"? "Login": "Logout",
-            counter: this.state.counter+=1
-        }, () => {
-            console.log("you just clicked me......")
+        this.setState((prevState, prevProps) => {
+        
 
-        })
-
+            //return the new object
+            return {
+                greeting: prevState.greeting === "Hello"? "Good bye": "Hello",
+                buttonText: prevState.buttonText === "Login"? "Logout": "Login",
+                counter: prevState.counter+=1
+            }
+        });
+        
+    
     }
 
      render(){

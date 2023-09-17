@@ -20,6 +20,9 @@ export class SearchBar extends Component {
         return name.toLowerCase().includes(textValue)
       })
       console.log(filteredNames)
+      this.setState({
+        names: filteredNames
+      })
     }
      
     

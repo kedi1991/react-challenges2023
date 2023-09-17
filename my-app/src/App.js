@@ -1,5 +1,8 @@
 import css from './App.module.css';
+import Content from './components/Content';
+import NavBarForm from './components/NavBarForm';
 import NavBarSimple from './components/NavBarSimple';
+import RenderList from './components/RenderList';
 import Sidebar from './components/Sidebar';
 import StatefulGreeting from './components/StatefulGreeting';
 import StatefulGreetingWithRespose from './components/StatefulGreetingWithResponse';
@@ -10,14 +13,18 @@ import Car from './components/nested/Car';
 function App() {
   return (
     <div className={css.App}>
+      <Content></Content>
+      {/* <RenderList></RenderList> */}
       {/* Add your components here */}
+{/* 
+      <Sidebar> </Sidebar> */}
+      
 
-      <Sidebar> </Sidebar>
-      <StatefulGreeting myname="Peter">
-
-      </StatefulGreeting>
+      
+{/**
+ * <StatefulGreeting myname="Peter">
+ * </StatefulGreeting>
       <StatefulGreetingWithRespose></StatefulGreetingWithRespose>
-
       <NavBarSimple>
 
       </NavBarSimple>
@@ -33,6 +40,13 @@ function App() {
 
       </Car>
 
+ */}
+{/* 
+<NavBarForm>
+
+</NavBarForm> */}
+
+      
     </div>
   );
 }

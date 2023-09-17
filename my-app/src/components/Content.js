@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import css from './css/Content.module.css'
 import PostItem from './PostItem'
 import savedPosts from '../posts.json'
+import Loader from './Loader'
 
 
 export default class Content extends Component {
@@ -10,8 +11,20 @@ export default class Content extends Component {
       super(props)
     
       this.state = {
-         
+         isLoaded: false
       }
+    }
+
+// the method to check ift he dom component is done loading
+    componentDidMount(){
+        setTimeout(() => {
+            //set the state
+            this.setState(
+                {
+                    isLoaded: true
+                }
+            );
+        }, 5000);
     }
 
   render() {
@@ -21,9 +34,15 @@ export default class Content extends Component {
             <h1>My Photos</h1>
         </div>
         <div className={css.SearchResults}>
-            <PostItem posts= {savedPosts.savedPosts}>
 
-            </PostItem>
+        {
+            this.state.isLoaded? <PostItem posts= {savedPosts.savedPosts}> </PostItem> :<Loader></Loader> 
+            
+        
+        }
+
+            
+            
         </div>
       </div>
     )

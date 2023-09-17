@@ -3,6 +3,7 @@ import Content from './components/Content';
 import NavBarForm from './components/NavBarForm';
 import NavBarSimple from './components/NavBarSimple';
 import RenderList from './components/RenderList';
+import SearchBar from './components/SearchBar';
 import Sidebar from './components/Sidebar';
 import StatefulGreeting from './components/StatefulGreeting';
 import StatefulGreetingWithRespose from './components/StatefulGreetingWithResponse';
@@ -13,7 +14,10 @@ import Car from './components/nested/Car';
 function App() {
   return (
     <div className={css.App}>
-      <Content></Content>
+      {/* <Content></Content> */}
+      <SearchBar>
+        
+      </SearchBar>
       {/* <RenderList></RenderList> */}
       {/* Add your components here */}
 {/* 

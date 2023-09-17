@@ -5,6 +5,7 @@ import StatefulGreeting from './components/StatefulGreeting';
 import StatefulGreetingWithRespose from './components/StatefulGreetingWithResponse';
 import ClassEvents from './components/events/ClassEvents';
 import FunctionalEvents from './components/events/FunctionalEvents';
+import Car from './components/nested/Car';
 
 function App() {
   return (
@@ -27,6 +28,10 @@ function App() {
       <FunctionalEvents>
 
       </FunctionalEvents>
+
+      <Car sizeT = "20" costT="15,000" yearT="1995" sizeB="5" costB="98,000" yearB="2021" >
+
+      </Car>
 
     </div>
   );

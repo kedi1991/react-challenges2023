@@ -62,7 +62,7 @@ export default class Content extends Component {
         <div className={css.SearchResults}>
 
         {
-            this.state.isLoaded? <PostItem posts = {savedPosts.savedPosts}> </PostItem> :<Loader></Loader> 
+            this.state.isLoaded? <PostItem posts = {this.state.posts}> </PostItem> :<Loader></Loader> 
             
         
         }

@@ -14,10 +14,10 @@ import Car from './components/nested/Car';
 function App() {
   return (
     <div className={css.App}>
-      {/* <Content></Content> */}
-      <SearchBar>
+      <Content></Content>
+      {/* <SearchBar>
         
-      </SearchBar>
+      </SearchBar> */}
       {/* <RenderList></RenderList> */}
       {/* Add your components here */}
 {/* 

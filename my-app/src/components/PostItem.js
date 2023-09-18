@@ -4,7 +4,7 @@ export default function PostItem(props) {
 
     return (
     props.posts.map( (post) => <div className='css.SearchItem'>{
-                <div>
+                <div key={post.title}>
                     <p>{post.title}</p>
                     <p>{post.name}</p>
                     <img src={post.image}></img>

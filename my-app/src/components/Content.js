@@ -11,7 +11,8 @@ export default class Content extends Component {
       super(props)
     
       this.state = {
-         isLoaded: false
+         isLoaded: false,
+         posts: []
       }
     }
 
@@ -21,22 +22,47 @@ export default class Content extends Component {
             //set the state
             this.setState(
                 {
-                    isLoaded: true
+                    isLoaded: true,
+                    posts: savedPosts.savedPosts
                 }
             );
         }, 5000);
     }
 
+    changeMaster = (e)=> {
+      const textValue = e.target.value.toLowerCase()
+      console.log(textValue)
+
+      const filteredItems = savedPosts.savedPosts.filter( name => {
+        return name.name.toLowerCase().includes(textValue)
+      })
+
+      this.setState({
+        posts: filteredItems
+      })
+      
+      console.log(filteredItems)
+    }
   render() {
     return (
       <div className= {css.Content}>
         <div className= {css.TitleBar}>
             <h1>My Photos</h1>
+            <form>
+              <label>Search:</label>
+              <input 
+              id= 'searchInput' 
+              type='text'
+              onChange = {(e) => this.changeMaster(e)}  
+              >
+              </input>
+              <h4>Posts found: {this.state.posts.length}</h4>
+            </form>
         </div>
         <div className={css.SearchResults}>
 
         {
-            this.state.isLoaded? <PostItem posts= {savedPosts.savedPosts}> </PostItem> :<Loader></Loader> 
+            this.state.isLoaded? <PostItem posts = {savedPosts.savedPosts}> </PostItem> :<Loader></Loader> 
             
         
         }

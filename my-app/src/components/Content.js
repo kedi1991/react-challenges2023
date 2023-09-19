@@ -16,7 +16,7 @@ export default class Content extends Component {
       }
     }
 
-// the method to check ift he dom component is done loading
+    // the method to check ift he dom component is done loading
     componentDidMount(){
         setTimeout(() => {
             //set the state

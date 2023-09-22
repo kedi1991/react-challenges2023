@@ -16,13 +16,26 @@ export default class HTTPRequests extends Component {
     componentDidMount(){
         //then call the API
         axios.get("https://jsonplaceholder.org/posts").then(
-            response => {console.log(response)}
+            response => {
+                console.log(response)
+                this.setState({
+                    posts: response.data
+                })
+            }
         )
+
+        
+
+        
     }
 
   render() {
     return (
-      <div>HTTPRequests</div>
+      <div>
+        <strong>Posts:</strong>
+        <p>{JSON.stringify(this.state.posts)}</p>
+      </div>
+      
     )
   }
 }

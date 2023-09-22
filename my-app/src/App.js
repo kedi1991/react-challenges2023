@@ -1,6 +1,7 @@
 import css from './App.module.css';
 import Content from './components/Content';
 import ContentHooks from './components/ContentHooks';
+import HTTPRequests from './components/HTTPRequests/HTTPRequests';
 import NavBarForm from './components/NavBarForm';
 import NavBarSimple from './components/NavBarSimple';
 import RenderList from './components/RenderList';
@@ -15,7 +16,8 @@ import Car from './components/nested/Car';
 function App() {
   return (
     <div className={css.App}>
-      <ContentHooks></ContentHooks>
+      <HTTPRequests></HTTPRequests>
+      {/* <ContentHooks></ContentHooks> */}
       {/* <SearchBar>
         
       </SearchBar> */}

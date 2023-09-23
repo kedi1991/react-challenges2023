@@ -1,5 +1,6 @@
 import css from './App.module.css';
 import Content from './components/Content';
+import ContentAPI from './components/ContentAPI';
 import ContentHooks from './components/ContentHooks';
 import HTTPPosts from './components/HTTPRequests/HTTPPosts';
 import HTTPRequests from './components/HTTPRequests/HTTPRequests';
@@ -17,7 +18,8 @@ import Car from './components/nested/Car';
 function App() {
   return (
     <div className={css.App}>
-      <HTTPPosts></HTTPPosts>
+      <ContentAPI></ContentAPI>
+      {/* <HTTPPosts></HTTPPosts> */}
       {/* <HTTPRequests></HTTPRequests> */}
       {/* <ContentHooks></ContentHooks> */}
       {/* <SearchBar>
